@@ -7,9 +7,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+<<<<<<< HEAD
 import { rootRouterConfig } from './app.routes';
 
 //import{AppRoutingModule} from './app.routes';
+=======
+//import { rootRouterConfig } from './app.routes';
+
+import{AppRoutingModule} from './app.routes';
+>>>>>>> 10b546d8302fa2b8a57af806ea1f6d811311de80
 import { RouterModule } from '@angular/router';
 import {MatNativeDateModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -74,9 +80,15 @@ import { RegisterComponent } from './register/index';
   imports: [
     BrowserModule,
     FormsModule,
+<<<<<<< HEAD
     //AppRoutingModule,
    //RouterModule.forRoot(AppRoutingModule, { useHash: false }),
     RouterModule.forRoot(rootRouterConfig, { useHash: false }),
+=======
+    AppRoutingModule,
+   //RouterModule.forRoot(AppRoutingModule, { useHash: false }),
+   // RouterModule.forRoot(rootRouterConfig, { useHash: false }),
+>>>>>>> 10b546d8302fa2b8a57af806ea1f6d811311de80
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
