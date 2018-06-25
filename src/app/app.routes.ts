@@ -1,4 +1,4 @@
-/* import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { Component } from '@angular/core';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
@@ -33,7 +33,7 @@ export const rootRouterConfig: Routes = [
   { path: '**', redirectTo: '' }
 ];
 export const routing = RouterModule.forRoot(rootRouterConfig);
- */
+ /*
 import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
@@ -74,4 +74,4 @@ const routes: Routes =[
   exports: [
   ],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { }*/
