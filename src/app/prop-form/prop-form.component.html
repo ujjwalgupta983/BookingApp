@@ -1,0 +1,40 @@
+<div class="col-md-6 col-md-offset-3">
+    <h2>Properties</h2>
+    <form name="propform" (ngSubmit)="register()" #f="ngForm" novalidate>
+        <div class="form-group"  [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="propname">Property Name</label>
+            <input type="text" class="form-control" name="propName" [(ngModel)]="model.propName" #propName="ngModel" required />
+          
+        </div>
+          <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addsprimary.valid }">
+            <label for="Add_1">Primary Address</label>
+            <input type="text" class="form-control" name="addsprimary" [(ngModel)]="model.addsprimary" #addsprimaryName="ngModel" required />
+        </div>
+        <div class="form-group">
+            <label for="Add_1">Address (Optional)</label>
+            <input type="text" class="form-control" name="addsSecondary" [(ngModel)]="model.addsSecondary" #addsSecondary="ngModel"/>
+          
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addsprimary.valid }">
+            <label for="city">City</label>
+            <input type="text" class="form-control" name="City" [(ngModel)]="model.city" #City="ngModel" required />
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addsprimary.valid }">
+            <label for="Add_1">Pincode</label>
+            <input type="text" class="form-control" name="Pin" [(ngModel)]="model.pin" #pin="ngModel" required />
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addsprimary.valid }">
+            <label for="Add_1">State</label>
+            <input type="text" class="form-control" name="State" [(ngModel)]="model.State" #State="ngModel" required />
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addsprimary.valid }">
+            <label for="type">Property Type</label>
+            <input type="text" class="form-control" name="State" [(ngModel)]="model.type" #type="ngModel" required />
+        </div>
+       
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-lg btn-primary" >Add Property</button>
+         
+ </div>
+    </form>
+</div>
