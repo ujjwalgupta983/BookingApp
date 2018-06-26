@@ -1,0 +1,11 @@
+#sidebar-wrapper {
+    margin-left: -150px;
+    left: 70px;
+    width: 200px;	
+    background: #222;
+    position: fixed;
+    height: 60%;
+    z-index: 10000;
+    transition: all .4s ease 0s;
+	float:top;
+}

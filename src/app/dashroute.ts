@@ -1,26 +1,3 @@
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { Component } from '@angular/core';
-import{ UserProfileComponent } from './user-profile/user-profile.component';
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { Routes ,RouterModule} from '@angular/router';
-import { HomeComponent } from './home/index';
-import { LoginComponent } from './login/index';
-import { RegisterComponent } from './register/index';
-import { AuthGuard } from './_guards/index';
-import { FormComponent } from './form-component/form.component';
-export const rootRouterConfig: Routes = [
- { path: '', component: HomeComponent},
- // { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  {path:'form-component',component:FormComponent},
-
-  { path: '**', redirectTo: '' }
-];
-export const routing = RouterModule.forRoot(rootRouterConfig);
- /*
 import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
@@ -61,4 +38,4 @@ const routes: Routes =[
   exports: [
   ],
 })
-export class AppRoutingModule { }*/
+export class AppRoutingModule { }

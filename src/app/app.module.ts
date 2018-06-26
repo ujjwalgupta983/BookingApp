@@ -7,15 +7,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
-
 import { rootRouterConfig } from './app.routes';
-
 //import{AppRoutingModule} from './app.routes';
-
-//import { rootRouterConfig } from './app.routes';
-
-import{AppRoutingModule} from './app.routes';
-
 import { RouterModule } from '@angular/router';
 import {MatNativeDateModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -49,7 +42,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
-
+import {UserProfileComponent} from './user-profile/user-profile.component';
 import { AppComponent } from './app.component';
 import { FormComponent } from './form-component/form.component';
 import { LandingComponent } from './landing/landing.component';
@@ -62,6 +55,8 @@ import { AlertService, AuthenticationService, UserService } from './_services/in
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
+import { PropFormComponent } from './prop-form/prop-form.component';
+import { TableComponent } from './table/table.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,22 +68,14 @@ import { RegisterComponent } from './register/index';
         FooterComponent,
         SidebarComponent,
         NavbarComponent,
-        DashboardComponent,
-       
-        RegisterComponent,AdminLayoutComponent
+        RegisterComponent,AdminLayoutComponent, PropFormComponent, TableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-
     //AppRoutingModule,
    //RouterModule.forRoot(AppRoutingModule, { useHash: false }),
     RouterModule.forRoot(rootRouterConfig, { useHash: false }),
-
-    AppRoutingModule,
-   //RouterModule.forRoot(AppRoutingModule, { useHash: false }),
-   // RouterModule.forRoot(rootRouterConfig, { useHash: false }),
-
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
