@@ -16,7 +16,7 @@
         </div>
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addsprimary.valid }">
             <label for="Add_1">Pincode</label>
-            <input type="text" class="form-control" name="Pin" [(ngModel)]="model.pin" #="ngModel" required />
+            <input type="text" class="form-control" name="Pin" [(ngModel)]="model.pin" #Pin="ngModel" required />
         </div>
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addsprimary.valid }">
             <label for="Add_1">State</label>

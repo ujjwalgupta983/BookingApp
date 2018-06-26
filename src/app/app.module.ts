@@ -57,6 +57,9 @@ import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { PropFormComponent } from './prop-form/prop-form.component';
 import { TableComponent } from './table/table.component';
+import { DataSource } from '@angular/cdk/table';
+import { CdkTableModule } from '@angular/cdk/table';
+import {TableListComponent} from './table-list/table-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +71,7 @@ import { TableComponent } from './table/table.component';
         FooterComponent,
         SidebarComponent,
         NavbarComponent,
-        RegisterComponent,AdminLayoutComponent, PropFormComponent, TableComponent
+        RegisterComponent,AdminLayoutComponent, PropFormComponent, TableComponent,TableListComponent
   ],
   imports: [
     BrowserModule,
@@ -118,7 +121,9 @@ import { TableComponent } from './table/table.component';
    MatSnackBarModule,
    MatTableModule,
    MatSortModule,
-   MatPaginatorModule
+   MatPaginatorModule,
+   CdkTableModule,
+   
   ],
   providers: [
     AuthGuard,

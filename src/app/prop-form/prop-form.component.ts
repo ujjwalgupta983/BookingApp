@@ -11,7 +11,7 @@ export class PropFormComponent implements OnInit {
   edit="false";
   public fieldArray: Array<any> = [];
   public newAttribute: any = {};
-  
+    
 
     addFieldValue() {
         this.fieldArray.push(this.newAttribute)

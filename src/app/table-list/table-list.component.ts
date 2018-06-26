@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-table-list',
+  selector: 'app-tablelist',
   templateUrl: './table-list.component.html',
   styleUrls: ['./table-list.component.css']
 })
