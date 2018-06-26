@@ -29,7 +29,7 @@
         </div>
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !addsprimary.valid }">
             <label for="type">Property Type</label>
-            <input type="text" class="form-control" name="State" [(ngModel)]="model.type" #type="ngModel" required />
+            <input type="text" class="form-control" name="type" [(ngModel)]="model.type" #type="ngModel" required />
         </div>
        
         <div class="form-group">
@@ -38,30 +38,3 @@
  </div>
     </form>
 </div>
-
-
-<mat-table #table [dataSource]="dataSource">
-
-    <ng-container matColumnDef="position">
-      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-      <mat-cell *matCellDef="let element">  </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="firstName">
-      <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
-      <mat-cell *matCellDef="let element">  </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="lastName">
-      <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
-      <mat-cell *matCellDef="let element">  <mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="email">
-      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
-      <mat-cell *matCellDef="let element">  </mat-cell>
-    </ng-container>
-
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table>
