@@ -12,7 +12,7 @@ import { AuthGuard } from './_guards/index';
 import { FormComponent } from './form-component/form.component';
 export const rootRouterConfig: Routes = [
  { path: '', component: HomeComponent},
- // { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+ //{ path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   {path:'form-component',component:FormComponent},

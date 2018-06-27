@@ -1,15 +1,27 @@
+import { Observable } from 'rxjs';
+import { Property } from './../_models/property';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Property } from '../_models/property';
 
 @Injectable()
 export class GriddataService {
-  readonly root_url="http://localhost:57055"
+    
+  readonly root_url="http://localhost:57055/api/Assests"
   constructor(private http: HttpClient) { }
+  
+  getComments() : Observable<Property[]> {
 
+    // ...using get request
+return this.http.get<Property[]>(this.root_url);
+                   // ...and calling .json() on the response to return dat
+                    //...errors if any
+                  
+}
   getAll() {
-      return this.http.get<Property[]>(this.root_url+'/api/Assests');
-     
+      
+    let a= this.http.get<Property[]>(this.root_url+'/api/Assests');
+   
+   
   }
 
   getById(id: number) {

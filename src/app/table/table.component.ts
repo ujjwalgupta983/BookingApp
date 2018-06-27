@@ -1,27 +1,13 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
-=======
 /* import {Component} from '@angular/core';
 import {DataSource} from '@angular/cdk/collections';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
->>>>>>> f3f3cd3c63d6dde53dcae9bde703d0cb98343337
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-<<<<<<< HEAD
-export class TableComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
-=======
 export class TableComponent {
   columns = [
     { columnDef: 'position', header: 'No.',    cell: (element: Element) => `${element.position}` },
@@ -124,4 +110,3 @@ export class ExampleDataSource extends DataSource<any> {
 
   disconnect() {}
 }
->>>>>>> f3f3cd3c63d6dde53dcae9bde703d0cb98343337

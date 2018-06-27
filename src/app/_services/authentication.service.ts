@@ -15,10 +15,12 @@ export class AuthenticationService {
 
     login(email: string, passcode: string) {
         const headers = new HttpHeaders().set('content-type', 'application/json'); 
-        return this.http.post<any>(this.root_url+'/api/Owner', { email: email, passcode: passcode},{headers})
+        return this.http.post<any>(this.root_url+'/api/OwnerAuth/login', { email: email, passcode: passcode},{headers})
             .map(user => {
+                console.log(user);
                 // login successful if there's a jwt token in the response
-                if (user && user.token) {
+                if (user) {
+                    
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
                     this.alertService.success('Login successful', true);
                 }

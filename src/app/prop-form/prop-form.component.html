@@ -2,7 +2,7 @@
     <h2>Properties</h2>
     <form name="propform" (ngSubmit)="register()" #f="ngForm" novalidate>
         <div class="form-group"  [ngClass]="{ 'has-error': f.submitted && !username.valid }">
-            <label for="propname">Property Name</label>
+            <label for="propName">Property Name</label>
             <input type="text" class="form-control" name="propName" [(ngModel)]="model.propName" #propName="ngModel" required />
           
         </div>

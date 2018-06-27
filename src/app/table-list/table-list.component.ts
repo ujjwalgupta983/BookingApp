@@ -1,3 +1,7 @@
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Property } from './../_models/property';
+import { GriddataService } from './../_services/griddata.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,11 +10,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-list.component.css']
 })
 export class TableListComponent implements OnInit {
-   GenerateTablelist() {
+    datas:any;
+    private data_url:"http://localhost:57055/api/Assests"
+    public gridservice:GriddataService;
+    public prop:Property[]=[];
+    public pro:any;
+    testResponse;
+      
+getdata(){
+   return this.http.get('http://localhost:57055/api/Assests');
+}
+getValues()
+{
+    this.getdata().subscribe(data=>{
+        console.log(data);
+        let obj=JSON.stringify(data);
+        console.log(obj);
+        this.prop=JSON.parse(obj);
+        console.log(this.prop);
+        console.log(this.prop[0].propName);
+    
+
+    });
+}
+GenerateTablelist() {
     //Build an array containing Customer records.
+    console.log("Hello");
+    
     let customers = new Array();
-    customers.push(["Customer Id", "Name", "Country","Abhinav"]);
-   
+    customers.push(["Customer Id", "Name", "Country","Abhinav"])
+    
     //Create a HTML Table element.
     let table:HTMLTableElement;
     table = document.createElement('table');
@@ -40,9 +69,10 @@ export class TableListComponent implements OnInit {
     dvTable.innerHTML = "";
     dvTable.appendChild(table);
 }
-  constructor() { }
-
+constructor(private http: HttpClient) { }
   ngOnInit() {
+     this.getdata();
+     this.getValues();
     this.GenerateTablelist();
   }
 
